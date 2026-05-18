@@ -1,0 +1,14 @@
+path: d:/detecion_señas
+train: train/images
+val: valid/images
+test: test/images
+
+nc: 33
+names: ['10', '2', '4', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'HOLA-5', 'I', 'K', 'L', 'M', 'MI', 'N', 'NOMBRE', 'O', 'P', 'Q', 'R', 'S', 'T', 'Te amo', 'U', 'W', 'X', 'Y']
+
+roboflow:
+  workspace: ecuadorian-language-sign
+  project: ecuadorian-sign-language
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/ecuadorian-language-sign/ecuadorian-sign-language/dataset/3

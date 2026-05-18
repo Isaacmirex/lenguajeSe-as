@@ -1,0 +1,55 @@
+# Datasets (1700+ imagenes, no necesarias para inferencia)
+train/
+valid/
+test/
+captures/
+examples/
+
+# Entorno virtual
+.venv/
+venv/
+env/
+
+# Artefactos de entrenamiento (mantener SOLO best.pt)
+runs/detect/*/weights/last.pt
+runs/detect/*/weights/epoch*.pt
+runs/detect/*/*.jpg
+runs/detect/*/*.png
+runs/detect/*/labels.cache
+runs/detect/*/results.csv
+runs/detect/*/args.yaml
+runs/detect/val/
+
+# Backbone preentrenado (se descarga automaticamente)
+yolov8n.pt
+yolov11n.pt
+yolo26n.pt
+
+# Frontend (esta en su propio repo)
+frontLenguaje de señas/
+
+# Imagen de referencia (3 MB, opcional)
+senas_referencia.png
+
+# Logs
+*.log
+train_gpu.log
+train_log.txt
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
