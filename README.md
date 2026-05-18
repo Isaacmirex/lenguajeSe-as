@@ -1,3 +1,15 @@
+---
+title: Lenguaje de Senas API
+emoji: 🤟
+colorFrom: green
+colorTo: indigo
+sdk: docker
+app_port: 7860
+pinned: false
+license: cc-by-4.0
+short_description: API FastAPI con YOLOv8n para detectar 33 senas ecuatorianas
+---
+
 # Detección de Lenguaje de Señas Ecuatoriano — Backend
 
 API REST con FastAPI + modelo YOLOv8n entrenado para detectar 33 señas
@@ -54,9 +66,21 @@ Credenciales demo: `admin` / `admin123`
 ## Frontend
 El cliente Next.js está en repo separado: `lenguajeSe-as_front`
 
-## Deploy
-- **NO usar Vercel** para este backend (límite 250 MB y PyTorch pesa ~3 GB)
-- Recomendado: **Render.com**, **Railway**, **Fly.io**, **Hugging Face Spaces**
+## Deploy en Hugging Face Spaces
+1. Crear un Space en https://huggingface.co/new-space
+   - SDK: **Docker**
+   - Hardware: CPU basic (gratis) o T4 si tienes Pro
+2. Agregar el remote y pushear:
+   ```bash
+   git remote add hf https://huggingface.co/spaces/<TU_USUARIO>/<NOMBRE_DEL_SPACE>
+   git push hf main
+   ```
+   (te pedirá tu HF token: https://huggingface.co/settings/tokens — usalo como password)
+3. La API quedará en `https://<TU_USUARIO>-<NOMBRE_DEL_SPACE>.hf.space`
+
+## Otros deploys
+- **NO usar Vercel** para este backend (límite 250 MB y PyTorch pesa ~700 MB)
+- También funciona en: **Render.com**, **Railway**, **Fly.io**
 
 ## Re-entrenamiento
 El dataset NO está incluido en el repo (1700+ imágenes). Descárgalo desde

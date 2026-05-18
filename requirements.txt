@@ -1,7 +1,18 @@
+# API
+fastapi>=0.110
+uvicorn[standard]>=0.27
+python-multipart>=0.0.7
+pyjwt>=2.8
+
+# Imagen
+pillow>=10.0
+numpy>=1.26
+
+# Modelo (ultralytics arrastra torch CPU automaticamente)
 ultralytics>=8.3.0
-opencv-python>=4.8
+
+# Solo necesario para generate_pdf.py / generar_referencia.py / webcam_test.py local
+# No imprescindible en produccion, pero ya viene en HF base images
+opencv-python-headless>=4.8
+PyYAML>=6
 reportlab>=4.0
-# Para exportar a TFLite necesitas ademas:
-# tensorflow>=2.15
-# onnx>=1.15
-# onnxruntime>=1.17
